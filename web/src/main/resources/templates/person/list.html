@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>아이디</th>
+            <th>성별</th>
+            <th>나이</th>
+        </tr>
+        <tr th:if="${#lists.size(persons) > 0}" th:each="person: ${persons}">
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.gender}"></td>
+            <td th:text="${person.age}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
