@@ -54,7 +54,7 @@ project(':web') {
 	}
 }
 
-project(':api') {
+project('api') {
 	bootRepackage {
 	    mainClass = 'kr.co.nakseo.ApiApplication'
 	}

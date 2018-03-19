@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_main.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_test.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library.iml" group="library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library_main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library_main.iml" group="library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/library_test.iml" filepath="$PROJECT_DIR$/.idea/modules/library/library_test.iml" group="library" />
+      <module fileurl="file://$PROJECT_DIR$/nakseo-modules.iml" filepath="$PROJECT_DIR$/nakseo-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web/web.iml" filepath="$PROJECT_DIR$/.idea/modules/web/web.iml" group="web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web/web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web/web_main.iml" group="web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web/web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web/web_test.iml" group="web" />
+    </modules>
+  </component>
+</project>

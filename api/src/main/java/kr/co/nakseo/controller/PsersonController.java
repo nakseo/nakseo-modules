@@ -25,13 +25,13 @@ public class PsersonController {
 		try {
 			List<Person> persons = personService.findPersonList();
 			if(persons.isEmpty()) {
-				return new ResponseEntity<List<Person>>(HttpStatus.NO_CONTENT);
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
-			return new ResponseEntity<List<Person>>(persons, HttpStatus.OK);
+			return new ResponseEntity<>(persons, HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
 			log.error("{}", e);
-			return new ResponseEntity<List<Person>>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 	
@@ -40,13 +40,13 @@ public class PsersonController {
 		try {
 			Person person = personService.findById(id);
 			if(person == null) {
-				return new ResponseEntity<Person>(HttpStatus.NO_CONTENT);
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 			}
-			return new ResponseEntity<Person>(person, HttpStatus.OK);
+			return new ResponseEntity<>(person, HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
 			log.error("{}", e);
-			return new ResponseEntity<Person>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}	
 }
