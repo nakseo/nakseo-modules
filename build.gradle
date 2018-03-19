@@ -33,7 +33,6 @@ subprojects {
 }
 
 project(':library') {
-
 	bootRepackage {
 	    enabled = false
 	}
@@ -41,11 +40,9 @@ project(':library') {
 	dependencies {
 	    compile('org.projectlombok:lombok:1.16.6')
 	}
-
 }
 
 project(':web') {
-
 	bootRepackage {
 	    mainClass = 'kr.co.nakseo.WebApplication'
 	}
@@ -53,6 +50,16 @@ project(':web') {
 	dependencies {
 	    compile project(':library')
 	    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	    //compile group: 'de.neuland-bfi', name: 'spring-jade4j', version: '1.2.7'
 	}
+}
 
+project(':api') {
+	bootRepackage {
+	    mainClass = 'kr.co.nakseo.ApiApplication'
+	}
+	
+	dependencies {
+	    compile project(':library')
+	}
 }
