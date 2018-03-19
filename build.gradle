@@ -1,0 +1,58 @@
+buildscript {
+    ext {
+        springBootVersion = "1.5.10.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    compileJava.options.encoding = "UTF-8"
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile "junit:junit:4+"
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+        compile('org.springframework.boot:spring-boot-starter-web')
+    }
+}
+
+project(':library') {
+
+	bootRepackage {
+	    enabled = false
+	}
+	
+	dependencies {
+	    compile('org.projectlombok:lombok:1.16.6')
+	}
+
+}
+
+project(':web') {
+
+	bootRepackage {
+	    mainClass = 'kr.co.nakseo.WebApplication'
+	}
+	
+	dependencies {
+	    compile project(':library')
+	    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	}
+
+}
