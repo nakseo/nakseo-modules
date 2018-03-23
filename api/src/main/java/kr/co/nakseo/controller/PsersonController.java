@@ -44,7 +44,6 @@ public class PsersonController {
 			}
 			return new ResponseEntity<>(person, HttpStatus.OK);
 		} catch (Exception e) {
-			// TODO: handle exception
 			log.error("{}", e);
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}

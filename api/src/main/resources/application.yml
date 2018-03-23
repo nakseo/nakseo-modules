@@ -4,4 +4,17 @@ server:
 logging:
   level: 
     kr.co.nakseo: debug
-    test.nakseo: debug 
+    test.nakseo: debug
+
+spring:
+  datasource:
+    driver-class-name: core.log.jdbc.driver.MysqlDriver
+    url: jdbc:mysql://localhost/nakseo
+    username: root
+    password: nakseo0102
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: false
+    show-sql: true
